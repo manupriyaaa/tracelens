@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraceLens - OSINT Platform</title>
+    <link rel="stylesheet" href="l.css">
+</head>
+<body>
+    <div class="bg-particles" id="particles"></div>
+    
+    <div class="login-container">
+        <div class="status-indicator"></div>
+        
+        <div class="logo-section">
+            <div class="logo">TraceLens</div>
+            <div class="tagline">सत्य देखें, स्रोत पहचानें।</div>
+            <div class="subtitle">Advanced OSINT Platform for Cybersecurity & Journalism</div>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="email" class="form-input" placeholder="Username or Email" required>
+                    <span class="input-icon">👤</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <input type="password" class="form-input" placeholder="Password" required>
+                    <span class="input-icon">🔒</span>
+                </div>
+            </div>
+
+            <div class="security-section">
+                <div class="security-title">
+                    🛡️ Two-Step Verification
+                </div>
+                <div class="security-options">
+                    <div class="security-option active" data-method="sms">
+                        <span class="icon">📱</span>
+                        <span class="label">SMS Code</span>
+                    </div>
+                    <div class="security-option" data-method="app">
+                        <span class="icon">🔐</span>
+                        <span class="label">Auth App</span>
+                    </div>
+                    <div class="security-option" data-method="biometric">
+                        <span class="icon">👆</span>
+                        <span class="label">Biometric</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verification-badge">
+                ✓ Journalist Verification Active
+            </div>
+
+            <button type="submit" class="login-btn"  onclick="window.location.href='index.html'">
+                Access TraceLens Platform
+            </button>
+        </form>
+
+        <div class="footer-links">
+            <a href="#">Forgot Password?</a>
+            <a href="#">Register Account</a>
+            <a href="#">Help Center</a>
+        </div>
+    </div>
+
+    <script src="l.js"></script>
+</body>
+</html>

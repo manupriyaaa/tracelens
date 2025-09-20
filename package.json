@@ -1,0 +1,34 @@
+{
+  "name": "face-detection-api",
+  "version": "1.0.0",
+  "description": "Mini Google Lens-style face detection API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "face-detection",
+    "computer-vision",
+    "api",
+    "express",
+    "opencv"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "face-api.js": "^0.22.2",
+    "canvas": "^2.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "type": "commonjs"
+}
