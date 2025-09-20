@@ -1,0 +1,239 @@
+/* Dashboard Component Styles */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #292950 0%, #13265a 50%, #103e75 100%);
+  color: white;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-left .logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-left .logo-symbol {
+  width: 32px;
+  height: 32px;
+  background: #eb8d13;
+  border-radius: 6px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header-center h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.language-toggle {
+  display: flex;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn.active {
+  background: #eb8d13;
+  border-color: #eb8d13;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-info span {
+  color: #bdc3c7;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+/* Navigation Tabs */
+.dashboard-nav {
+  display: flex;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-tab:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-tab.active {
+  color: white;
+  border-bottom-color: #eb8d13;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tab-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Main Content */
+.dashboard-main {
+  padding: 40px;
+  min-height: calc(100vh - 140px);
+}
+
+.tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Error Banner */
+.error-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 12px 20px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.error-close {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dashboard-nav {
+    padding: 0 20px;
+  }
+
+  .nav-tab {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+
+  .user-info span {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-left .logo {
+    font-size: 16px;
+  }
+
+  .header-left .logo-symbol {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .header-center h1 {
+    font-size: 20px;
+  }
+
+  .dashboard-nav {
+    overflow-x: auto;
+  }
+
+  .nav-tab {
+    white-space: nowrap;
+  }
+}
+

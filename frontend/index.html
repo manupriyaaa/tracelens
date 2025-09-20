@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace Lens - Professional Face Detection Platform</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional face detection platform with advanced AI-powered image analysis and verification capabilities.">
+    <meta name="keywords" content="face detection, AI, image analysis, verification, professional platform">
+    <meta name="author" content="Trace Lens">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Trace Lens - Professional Face Detection Platform">
+    <meta property="og:description" content="Advanced AI-powered face detection and image analysis platform">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tracelens.com">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trace Lens - Professional Face Detection Platform">
+    <meta name="twitter:description" content="Advanced AI-powered face detection and image analysis platform">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#292950">
+
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.jsx" as="script" type="module">
+</head>
+<body>
+    <!-- Root element for React -->
+    <div id="root"></div>
+
+    <!-- Loading fallback -->
+    <noscript>
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #292950 0%, #13265a 50%, #103e75 100%); color: white;">
+            <div style="text-align: center;">
+                <h1>JavaScript Required</h1>
+                <p>Please enable JavaScript to use Trace Lens platform.</p>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- React Module Script -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
+
